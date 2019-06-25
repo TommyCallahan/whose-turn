@@ -1,0 +1,354 @@
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Custom */
+
+
+.turn-form {
+  border-radius: 5px;
+  background-color: #333;
+}
+
+.store-selector {
+  text-align: center;
+}
+
+.store-selector h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+ button {
+  background-color: teal;
+  border:0px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.store-selector button:hover {
+  background-color: #42b0f4;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 0px;
+}
+
+.turnTable {
+  width: 90%;
+  display: block;
+  background-color: #222;
+  max-width: 350px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: 2px solid#e4e4e5;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.delete {
+  position: absolute;
+  top: 0px;
+  cursor: pointer;
+  right: 5px;
+  padding: 0px;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+.checkbox-wrap {
+width: 100%;
+}
+
+.participants {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+.particpantInputs {
+  background-color: transparent;
+  border:0px;
+  color: #fff;
+  font-size: 23px;
+  outline: none;
+  width: 44%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.particpantInputs::placeholder { /* Firefox, Chrome, Opera */
+    color:#fff;
+    opacity: 1;
+}
+
+.particpantInputs:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#fff;
+    opacity: 1;
+}
+
+.particpantInputs::-ms-input-placeholder { /* Microsoft Edge */
+    color:#fff;
+    opacity: 1;
+}
+
+
+.turntable .participant:last-of-type{
+  text-align: right;
+}
+
+.checkbox-wrap {
+  width: 72%;
+  background-color: red;
+  border-radius: 13px;
+  margin: 0 auto;
+  margin-top: 0px;
+  border: 2px solid #fff;
+  margin-top: 10px;
+  position: relative;
+  cursor: pointer;
+  height: 26px;
+}
+
+.checkbox-wrap:after {
+  content: "";
+height: 24px;
+display: block;
+position: absolute;
+background-color: #fff;
+width: 24px;
+top: 1px;
+border-radius: 50%;
+-webkit-transition: all 300ms ease-in-out;
+-moz-transition: all 300ms ease-in-out;
+-ms-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;
+transition: all 300ms ease-in-out;
+left: 2px;
+
+}
+
+.checkbox-wrap input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.status-false .checkbox-wrap {
+  background-color: teal;
+}
+
+.status-false .checkbox-wrap:after {
+  left:auto;
+  right:2px;
+  -webkit-transition: all 300ms ease-in-out;
+-moz-transition: all 300ms ease-in-out;
+-ms-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;
+transition: all 300ms ease-in-out;
+}
+
+.note {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+}
+
+.what-turn {
+  display: none;
+}
+
+.status-false .their-turn {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.status-true .my-turn {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.turn-form {
+  padding: 10px;
+  border-radius: 5px;
+  border:2px solid #fff;
+}
+
+.turn-form button {
+  margin-top: 15px;
+}
+
+.turn-form input, .turn-form textarea {
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #236192;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #658D1B;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #658D1B;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  right: 4px;
+  left: auto;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+/* new switch */
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  outline: none;
+}
+.switch input {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+.status-true {
+}
+.status-false {
+}
